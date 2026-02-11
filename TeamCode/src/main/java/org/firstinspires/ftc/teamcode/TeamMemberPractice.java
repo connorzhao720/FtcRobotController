@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp
 public class TeamMemberPractice extends OpMode {
+    boolean initDone;
     @Override
     public void loop() {
         double yAxis = gamepad1.left_stick_y;
@@ -24,6 +25,7 @@ public class TeamMemberPractice extends OpMode {
     }
     @Override
     public void init() {
-
+        telemetry.addData("init", initDone);
+        initDone = true;
     }
 }
